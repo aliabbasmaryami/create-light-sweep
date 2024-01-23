@@ -1,0 +1,47 @@
+.effect {
+	position: absolute;
+	width: 80vw;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		z-index: 0;
+		position: relative;
+		z-index: 1;
+		display: block;
+	}
+
+	.gradient {
+		position: absolute;
+		width: 60%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		background: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0) 0%,
+			#00c4cc 20%,
+			#00c4cc 20%,
+			#7d2ae8 90%
+		);
+		mix-blend-mode: color;
+		filter: contrast(3) brightness(1.2) saturate(1.4);
+		animation: gradient 4.5s linear infinite;
+	}
+
+	@keyframes gradient {
+		0% {
+			transform: translateX(-100%);
+		}
+		60% {
+			transform: translateX(170%);
+		}
+		100% {
+			transform: translateX(170%);
+		}
+	}
+}
